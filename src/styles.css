@@ -1,0 +1,19 @@
+.top-bar {
+  background: #6a00ff;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  min-height: 70vh;
+  padding: 24px;
+}
+
+.footer {
+  background: #6a00ff;
+  color: white;
+  text-align: center;
+  padding: 12px;
+}

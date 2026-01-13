@@ -1,0 +1,169 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+
+  padding: 12px 20px;
+  background: #ffffff;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Logo — balanced for header */
+.logo-img {
+  height: 152px;
+  width: 152px;
+  object-fit: contain;
+
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  flex-shrink: 0;
+}
+
+/* Brand text */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+/* Company name — BOLD + BLUE */
+.brand-full {
+  font-weight: 900;
+  font-size: 16px;
+  color: #0b5cff;
+  letter-spacing: 0.4px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tagline */
+.brand-tagline {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4b5563;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #1f2937;
+}
+
+.nav-link:hover {
+  background: rgba(11, 92, 255, 0.08);
+  color: #0b5cff;
+}
+
+/* CTA Button */
+.cta {
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 14px;
+  background: #0b5cff;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Main & Footer */
+.main-content {
+  min-height: 70vh;
+  padding: 28px 20px;
+}
+
+.footer {
+  background: #0f0f14;
+  color: #ffffff;
+  padding: 18px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .top-bar {
+    grid-template-columns: 1fr auto;
+    row-gap: 10px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .top-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .brand-full {
+    font-size: 14px;
+  }
+
+  .brand-tagline {
+    font-size: 11px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-link {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 10px 12px;
+  }
+}
