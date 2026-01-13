@@ -1,0 +1,92 @@
+<section class="contact" id="contact">
+  <div class="contact-head">
+    <div class="contact-badge">CONTACT US</div>
+    <h2 class="contact-title">Let’s Build Something Great</h2>
+    <p class="contact-subtitle">
+      Share your requirement and we’ll respond quickly with the best solution.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Left: Contact Info -->
+    <div class="info">
+      <div class="info-card">
+        <h3>Address</h3>
+        <p>
+          BIN HAIDER BUILDING<br>
+          PORT SAEED, DEIRA<br>
+          Dubai, United Arab Emirates
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Phone</h3>
+        <p>
+          <a href="tel:042202998">04 220 2998</a>
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:HR@techcosoftwareandresearch.com">
+            HR@techcosoftwareandresearch.com
+          </a>
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Website</h3>
+        <p>
+          <a href="https://techcosoftwareandresearch.com" target="_blank">
+            techcosoftwareandresearch.com
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <form class="form" (ngSubmit)="submitForm()">
+      <div class="field">
+        <label>Your Name</label>
+        <input
+          type="text"
+          [(ngModel)]="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label>Phone Number</label>
+        <input
+          type="tel"
+          [(ngModel)]="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label>Your Message</label>
+        <textarea
+          [(ngModel)]="message"
+          name="message"
+          rows="5"
+          placeholder="Tell us your requirement"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn">
+        Send on WhatsApp
+      </button>
+
+      <p class="note">
+        By submitting, you agree to be contacted via WhatsApp or phone regarding your request.
+      </p>
+    </form>
+  </div>
+</section>

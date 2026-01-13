@@ -1,0 +1,17 @@
+<section class="features" id="features">
+  <div class="features-head">
+    <div class="features-badge">WHY CHOOSE US</div>
+    <h2 class="features-title">Reliable. Secure. Results-Driven.</h2>
+    <p class="features-subtitle">
+      We focus on quality delivery, strong security, and long-term support to help your business grow with confidence.
+    </p>
+  </div>
+
+  <div class="features-grid">
+    <div class="f-card" *ngFor="let f of features; trackBy: trackByTitle">
+      <img class="f-img" [src]="f.img" [alt]="f.alt" />
+      <h3>{{ f.title }}</h3>
+      <p>{{ f.desc }}</p>
+    </div>
+  </div>
+</section>

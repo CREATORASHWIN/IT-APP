@@ -1,0 +1,149 @@
+.contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 0 50px;
+}
+
+.contact-head {
+  margin-bottom: 18px;
+}
+
+.contact-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  background: rgba(11, 92, 255, 0.12);
+  color: #0b5cff;
+}
+
+.contact-title {
+  margin: 12px 0 8px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.contact-subtitle {
+  margin: 0;
+  color: #475569;
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.contact-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+}
+
+/* Left side */
+.info {
+  display: grid;
+  gap: 16px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(2, 6, 23, 0.06);
+}
+
+.info-card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.info-card p {
+  margin: 0;
+  color: #475569;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.info-card a {
+  color: #0b5cff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.info-card a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+.form {
+  background: #ffffff;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(2, 6, 23, 0.06);
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+label {
+  font-weight: 900;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(2, 6, 23, 0.12);
+  border-radius: 12px;
+  padding: 12px 12px;
+  font-size: 14px;
+  outline: none;
+  font-weight: 600;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(11, 92, 255, 0.55);
+  box-shadow: 0 0 0 4px rgba(11, 92, 255, 0.12);
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: #0b5cff;
+  color: #ffffff;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(11, 92, 255, 0.22);
+}
+
+.note {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

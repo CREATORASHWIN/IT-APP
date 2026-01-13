@@ -1,0 +1,99 @@
+.services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 0 50px;
+}
+
+.services-head {
+  margin-bottom: 18px;
+}
+
+.services-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  background: rgba(11, 92, 255, 0.12);
+  color: #0b5cff;
+}
+
+.services-title {
+  margin: 12px 0 8px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.services-subtitle {
+  margin: 0;
+  color: #475569;
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* Grid */
+.services-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  border-radius: 18px;
+  padding: 22px 18px;
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(2, 6, 23, 0.06);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.14);
+  border-color: rgba(11, 92, 255, 0.35);
+}
+
+/* Service Image (replaces emoji icon) */
+.service-img {
+  width: 205px;
+  height: 205px;
+  margin: 0 auto 14px;
+  object-fit: cover;
+}
+
+/* Text */
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.card p {
+  margin: 0;
+  color: #475569;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
