@@ -1,4 +1,5 @@
-<header class="top-bar">
+<!-- HEADER -->
+<header class="top-bar" id="home">
   <div class="brand">
     <img
       src="logo.png"
@@ -14,24 +15,35 @@
     </div>
   </div>
 
+  <!-- NAVIGATION -->
   <nav class="nav">
-    <a class="nav-link">Home</a>
-    <a class="nav-link">About</a>
-    <a class="nav-link">Services</a>
-    <a class="nav-link">Contact</a>
+    <a class="nav-link" href="#home">Home</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#services">Services</a>
+    <a class="nav-link" href="#contact">Contact</a>
   </nav>
 
-  <a class="cta">Get Consultation</a>
+  <!-- CTA → WHATSAPP -->
+  <a
+    class="cta"
+    href="https://wa.me/971562245863?text=Hello%20TECHCO%20Software%20and%20Research,%20I%20would%20like%20to%20get%20a%20consultation."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Get Consultation
+  </a>
 </header>
 
+<!-- MAIN CONTENT -->
 <main class="main-content">
   <app-hero></app-hero>
-  <app-services></app-services>
+  <app-services id="services"></app-services>
   <app-features></app-features>
-  <app-contact></app-contact>
+  <app-contact id="contact"></app-contact>
   <router-outlet></router-outlet>
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
   © 2023 TECHCO SOFTWARE AND RESEARCH FZ LLC. All Rights Reserved.
 </footer>

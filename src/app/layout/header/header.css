@@ -1,7 +1,55 @@
-.header {
-  padding: 16px 24px;
-  background: #6a00ff;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+.nav {
+  position: sticky;          /* stays on top while scrolling */
+  top: 0;
+  z-index: 10000;            /* higher than hero/cards */
+  background: #ffffff;
+
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  border-bottom: 1px solid rgba(2, 6, 23, 0.08);
+  box-shadow: 0 6px 18px rgba(2, 0, 23, 0.06);
+}
+
+/* Ensure nothing blocks nav clicks */
+.nav,
+.nav * {
+  pointer-events: auto;
+}
+
+/* Links */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 15px;
+
+  color: #0f172a;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+  background: rgba(11, 92, 255, 0.1);
+  color: #0b5cff;
+}
+
+/* Active (Home) */
+.nav-link.active {
+  background: rgba(11, 92, 255, 0.15);
+  color: #0b5cff;
+}
+
+/* Mobile safety */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+  }
 }
