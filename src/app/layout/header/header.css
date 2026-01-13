@@ -1,25 +1,40 @@
+/* MODERN NAV HEADER */
 .nav {
-  position: sticky;          /* stays on top while scrolling */
+  position: sticky;
   top: 0;
-  z-index: 10000;            /* higher than hero/cards */
-  background: #ffffff;
+  z-index: 10000;
 
-  padding: 14px 20px;
+  /* Modern glass + gradient */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(240, 245, 255, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  padding: 14px 22px;
   display: flex;
   align-items: center;
   gap: 18px;
 
   border-bottom: 1px solid rgba(2, 6, 23, 0.08);
-  box-shadow: 0 6px 18px rgba(2, 0, 23, 0.06);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+
+  /* Smooth modern transitions */
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    backdrop-filter 0.4s ease;
 }
 
-/* Ensure nothing blocks nav clicks */
+/* Ensure clicks always work */
 .nav,
 .nav * {
   pointer-events: auto;
 }
 
-/* Links */
+/* NAV LINKS */
 .nav-link {
   display: inline-flex;
   align-items: center;
@@ -32,19 +47,45 @@
 
   color: #0f172a;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
 }
 
-/* Hover */
+/* Hover effect */
 .nav-link:hover {
-  background: rgba(11, 92, 255, 0.1);
+  background: rgba(11, 92, 255, 0.12);
+  color: #0b5cff;
+  transform: translateY(-1px);
+}
+
+/* Active link */
+.nav-link.active {
+  background: rgba(11, 92, 255, 0.18);
   color: #0b5cff;
 }
 
-/* Active (Home) */
-.nav-link.active {
-  background: rgba(11, 92, 255, 0.15);
-  color: #0b5cff;
+/* SCROLLED STATE (optional but recommended) */
+.nav.scrolled {
+  background: linear-gradient(
+    135deg,
+    rgba(11, 92, 255, 0.92),
+    rgba(8, 71, 201, 0.92)
+  );
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(11, 92, 255, 0.35);
+}
+
+/* Change link color on scroll */
+.nav.scrolled .nav-link {
+  color: #ffffff;
+}
+
+.nav.scrolled .nav-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
 }
 
 /* Mobile safety */

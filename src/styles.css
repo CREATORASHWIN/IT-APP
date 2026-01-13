@@ -1,35 +1,86 @@
-/* Global Theme Variables */
+/* ============================
+   GLOBAL THEME VARIABLES
+============================ */
 :root {
-  --brand-primary: #0b5cff;     /* modern tech blue */
+  --brand-primary: #0b5cff;        /* modern tech blue */
   --brand-primary-dark: #0847c9;
-  --bg-main: #f8fafc;           /* soft light background */
+  --bg-main: #f8fafc;              /* fallback */
   --bg-card: #ffffff;
   --text-main: #0f172a;
+  --text-muted: #475569;
 }
 
-/* Top Bar */
+/* ============================
+   FULL PAGE MODERN BACKGROUND
+============================ */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text-main);
+  overflow-x: hidden;
+
+  /* Modern soft gradient background */
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #eef2ff 40%,
+    #f1f5f9 100%
+  );
+}
+
+/* Smooth scrolling for menu anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================
+   TOP BAR
+============================ */
 .top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+
   background: linear-gradient(
     135deg,
     var(--brand-primary),
     var(--brand-primary-dark)
   );
   color: #ffffff;
+
   padding: 16px;
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.4px;
 }
 
-/* Main Content */
+/* ============================
+   MAIN CONTENT
+============================ */
 main {
   min-height: 70vh;
   padding: 24px;
-  background-color: var(--bg-main);
+
+  /* Keep content readable on gradient */
+  background: transparent;
   color: var(--text-main);
 }
 
-/* Footer */
+/* Optional: make your cards pop nicely (safe if you use .card etc.) */
+.card,
+.f-card,
+.info-card,
+.form {
+  background: var(--bg-card);
+}
+
+/* ============================
+   FOOTER
+============================ */
 .footer {
   background: linear-gradient(
     135deg,
