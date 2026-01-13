@@ -1,0 +1,281 @@
+/* HERO BASE */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 0;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+
+  background: rgba(11, 92, 255, 0.12);
+  color: #0b5cff;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(11, 92, 255, 0.25);
+}
+
+/* Title */
+.hero-title {
+  margin: 14px 0 12px;
+  font-size: 46px;
+  line-height: 1.05;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.hero-title span {
+  color: #0b5cff;
+  transition: color 0.3s ease;
+}
+
+.hero-title:hover span {
+  color: #003ecb;
+}
+
+/* Description */
+.hero-desc {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 620px;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  cursor: pointer;
+
+  /* Make <a> behave like a button */
+  user-select: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Primary button */
+.btn-primary {
+  background: #0b5cff;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(11, 92, 255, 0.35);
+  background: #003ecb;
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: rgba(15, 23, 42, 0.06);
+  color: #0f172a;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+  background: rgba(15, 23, 42, 0.12);
+}
+
+/* Stats cards */
+.hero-stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #ffffff;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  border-radius: 16px;
+  padding: 12px 14px;
+  min-width: 140px;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.15);
+}
+
+.stat-num {
+  font-size: 22px;
+  font-weight: 900;
+  color: #0b5cff;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+}
+
+/* Right card */
+.hero-card {
+  background: #ffffff;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.18);
+}
+
+.hero-card-title {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.hero-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.9;
+  font-weight: 700;
+  color: #475569;
+}
+
+.hero-list li {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.hero-list li:hover {
+  transform: translateX(6px);
+  color: #0b5cff;
+}
+
+/* --------------------- */
+/* CONSULTATION MODAL UI */
+/* --------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+  padding: 16px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  animation: scaleIn 0.22s ease;
+}
+
+.modal h2 {
+  margin: 0 0 14px 0;
+  font-weight: 900;
+  color: #0b5cff;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  font-size: 14px;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: rgba(11, 92, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(11, 92, 255, 0.12);
+}
+
+.modal textarea {
+  resize: none;
+  height: 90px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions .btn-primary,
+.form-actions .btn-secondary {
+  width: 100%;
+}
+
+/* Modal animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
